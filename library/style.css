@@ -109,8 +109,7 @@ h1 {
 }
 img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 img.nyt-logo {
@@ -131,6 +130,13 @@ picture {
   scroll-snap-align: start;
   position: relative;
   background-color: black;
+}
+
+figure div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
 figcaption {
