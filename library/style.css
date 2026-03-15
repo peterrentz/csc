@@ -76,21 +76,22 @@ picture {
   scroll-snap-align: start;
   position: relative;
   background-color: black;
-
-  &.yellow-border {
-    border: 6px solid var(--csc-yellow);
-  }
-
-  &.red-border {
-    border: 6px solid var(--csc-red);
-  }
-
-  div.black-matte {
-    padding: 2rem;
-    height: 100vh;
-    background-color: black;
-  }
 }
+
+.yellow-border {
+    border: 6px solid var(--csc-yellow);
+}
+
+.red-border {
+    border: 6px solid var(--csc-red);
+}
+
+div.black-matte {
+  padding: 2rem;
+  height: 100vh;
+  background-color: black;
+}
+
 
 figcaption {
   position: absolute;
