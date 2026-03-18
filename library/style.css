@@ -160,3 +160,26 @@ figure.vertical figcaption {
 figure.inset-white {
   background: white;
 }
+
+/* Portrait grid: 6×3, matching csc-desktop-04 layout */
+.portrait-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, auto));
+  gap: clamp(0.5rem, 2vmin, 1.25rem);
+  padding: clamp(0.5rem, 2vmin, 1.25rem);
+  width: 100%;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  background: #000;
+}
+
+.portrait-grid .grid-cell {
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: hsl(var(--hue, 0) 70% 45%);
+  border-radius: 2px;
+}
