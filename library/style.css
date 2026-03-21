@@ -2,7 +2,7 @@
   --textcolor: #000;
   --csc-yellow: #ffd700;
   --csc-red: red;
-  --sans: 'helvetica neue', helvetica, arial, sans-serif;
+  --sans: "helvetica neue", helvetica, arial, sans-serif;
 }
 
 html {
@@ -25,7 +25,6 @@ html {
   font-family: var(--sans);
   color: var(--textcolor);
 }
-
 
 h1 {
   top: 0;
@@ -68,8 +67,7 @@ img {
   object-fit: cover;
 }
 
-figure,
-picture {
+.slide {
   margin: 0;
   height: 100vh;
   display: block;
@@ -78,20 +76,30 @@ picture {
   background-color: black;
 }
 
-.yellow-border {
-    border: 6px solid var(--csc-yellow);
+/* .yellow-border {
+  border: 6px solid var(--csc-yellow);
+} */
+
+.fixed-border {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  border: 1.5vh solid var(--csc-yellow);
+  position: fixed;
 }
 
-.red-border {
-    border: 6px solid var(--csc-red);
+
+div.red-matte {
+  padding: 3vh;
+  height: 100vh;
+  background-color: var(--csc-red);
 }
 
 div.black-matte {
-  padding: 2rem;
+  padding: 3vh;
   height: 100vh;
   background-color: black;
 }
-
 
 figcaption {
   position: absolute;
@@ -136,7 +144,7 @@ figure.inset-white {
   margin: 0 auto;
   box-sizing: border-box;
   height: 100vh;
-  padding: 3rem;
+  padding: 3vh;
   background-color: purple;
   background-color: color(display-p3 0.46 0 1);
 }
@@ -161,13 +169,105 @@ figure.inset-white {
   background: white;
 }
 
+.collage-03 {
+  padding: 3vh;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  gap: 1vw;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  background: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .pep {
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    width: 20vw;
+
+    figure {
+      width: 100%;
+      height: auto;
+      background: lime;
+    }
+  }
+
+  .danny {
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    width: 80vw;
+
+    .danny-top-row {
+      display: flex;
+      gap: 1vw;
+      flex-direction: row;
+      justify-content: space-between;
+
+      figure img {
+        object-fit: unset;
+        height: auto;
+      }
+
+      figure.danny-lions-gate {
+        width: 35vw;
+        height: auto;
+      }
+
+      figure.hope {
+        width: 21vw;
+        height: auto;
+      }
+
+      figure.sword {
+        width: 13vw;
+        height: auto;
+      }
+    }
+
+    .vero-bottom-row {
+      display: flex;
+      gap: 1vw;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      figure img {
+        object-fit: unset;
+        height: auto;
+      }
+
+      figure.vero {
+        width: 20vw;
+        height: auto;
+      }
+
+      figure.heart {
+        width: 20vw;
+        height: auto;
+      }
+
+      figure.amy {
+        width: 30vw;
+        height: auto;
+      }
+    }
+
+
+  }
+}
+
 /* Portrait grid: 6×3, matching csc-desktop-04 layout */
 .portrait-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(3, minmax(0, auto));
   gap: clamp(0.5rem, 2vmin, 1.25rem);
-  padding: 2rem;
+  padding: 3vh;
   width: 100%;
   min-height: 100vh;
   scroll-snap-align: start;
@@ -183,7 +283,7 @@ figure.inset-white {
 }
 
 .portrait-grid .grid-cell img {
-    object-fit: cover;
-    aspect-ratio: 4 / 5;
-    height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+  height: 100%;
 }
