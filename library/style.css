@@ -179,7 +179,10 @@ figure.inset-white {
   min-width: 0;
   min-height: 0;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  background: hsl(var(--hue, 0) 70% 45%);
-  border-radius: 2px;
+}
+
+.portrait-grid .grid-cell img {
+    object-fit: unset;
+    aspect-ratio: 4 / 5;
+    height: auto;
 }
