@@ -167,7 +167,7 @@ figure.inset-white {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(3, minmax(0, auto));
   gap: clamp(0.5rem, 2vmin, 1.25rem);
-  padding: clamp(0.5rem, 2vmin, 1.25rem);
+  padding: 2rem;
   width: 100%;
   min-height: 100vh;
   scroll-snap-align: start;
@@ -179,10 +179,11 @@ figure.inset-white {
   min-width: 0;
   min-height: 0;
   width: 100%;
+  max-width: 24vh;
 }
 
 .portrait-grid .grid-cell img {
-    object-fit: unset;
+    object-fit: cover;
     aspect-ratio: 4 / 5;
-    height: auto;
+    height: 100%;
 }
