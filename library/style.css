@@ -35,14 +35,18 @@ ul {
 }
 
 ul li {
-  background: var(--csc-yellow);
   font-family: var(--sans);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 4vh;
   text-transform: uppercase;
   list-style-position: inherit;
   list-style-type: none;
+
+}
+
+ul li span {
   padding: 0.25rem;
+  background: var(--csc-yellow);
 }
 
 h1 {
