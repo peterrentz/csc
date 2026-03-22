@@ -26,6 +26,25 @@ html {
   color: var(--textcolor);
 }
 
+ul {
+    border-left: 1vh solid var(--csc-red);
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+ul li {
+  background: var(--csc-yellow);
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  list-style-position: inherit;
+  list-style-type: none;
+  padding: 0.25rem;
+}
+
 h1 {
   top: 0;
   font-size: 100px;
