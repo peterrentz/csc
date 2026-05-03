@@ -156,7 +156,7 @@ figcaption {
 }
 
 @media (max-width: 768px) {
- figcaption h2 {
+  figcaption h2 {
     font-size: 3.4vh;
   }
 }
@@ -208,9 +208,9 @@ figure.inset-white {
 }
 
 @media (max-width: 768px) {
-figure.cover img {
-  object-position: -290px 0;
-}
+  figure.cover img {
+    object-position: -290px 0;
+  }
 }
 
 
@@ -307,11 +307,37 @@ figure.cover img {
   }
 }
 
+@media (max-width: 768px) {
+  .collage-03{
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    max-height: unset;
+
+    .pep {
+      width: 85vw;
+      gap: 1vh;
+    }
+    .danny {
+      width: 85vw;
+
+      .danny-top-row, .vero-bottom-row {
+        flex-direction: column;
+        gap: 1vh;
+
+        figure.danny-lions-gate, figure.hope, figure.sword, figure.vero, figure.heart, figure.amy {
+          width: 85vw;
+        }
+      }
+    }
+  }
+}
+
 
 @media (max-width: 768px) {
-figure.group-shot div img {
-  object-fit: contain;
-}
+  figure.group-shot div img {
+    object-fit: contain;
+  }
 }
 
 .collab-07 {
@@ -376,12 +402,13 @@ figure.group-shot div img {
 
 @media (max-width: 768px) {
   .collab-07 {
-    grid-template-columns: 1fr;
-    height: auto;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: unset;
 
     .brands {
       order: 1;
+      width: 100%;
     }
 
     .flatlay {
@@ -461,9 +488,10 @@ figure.group-shot div img {
 
 @media (max-width: 768px) {
   .exhibit-09 {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     height: auto;
-    min-height: 100vh;
+    gap: 2vw;
 
     .brands {
       order: 1;
@@ -488,6 +516,10 @@ figure.group-shot div img {
     .soccer {
       order: 6;
     }
+  }
+
+  .exhibition-cover img {
+    object-position: -1000px 0;
   }
 }
 
@@ -553,10 +585,15 @@ figure.group-shot div img {
 
 @media (max-width: 768px) {
   .events-11 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
     height: auto;
     min-height: 100vh;
+    gap: 2vw;
+
+    ul {
+      margin-bottom: 2vw;
+  }
 
     .brands {
       order: 1;
@@ -603,7 +640,7 @@ figure.group-shot div img {
 .press-17 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);
   padding: 0;
   background: #fff;
   height: 100vh;
@@ -632,12 +669,17 @@ figure.group-shot div img {
     height: auto;
     min-height: 100vh;
 
-    .brands { order: 1; }
+    .brands {
+      order: 1;
+    }
+
     .screenshots {
       order: 2;
       height: 70vw;
 
-      img { object-position: center center; }
+      img {
+        object-position: center center;
+      }
     }
   }
 }
@@ -676,6 +718,15 @@ figure.group-shot div img {
   }
 }
 
+@media (max-width: 768px) {
+.merch-15 {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  height: unset;
+}
+}
+
 /* Portrait grid: 6×3, matching csc-desktop-04 layout */
 .portrait-grid {
   display: grid;
@@ -691,12 +742,10 @@ figure.group-shot div img {
 }
 
 @media (max-width: 768px) {
-.portrait-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  .portrait-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
-}
-
-
 
 .portrait-grid .grid-cell {
   min-width: 0;
