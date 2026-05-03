@@ -11,6 +11,12 @@ html {
   scroll-snap-type: y mandatory;
 }
 
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
+}
+
 @media (min-width: 1024px) {
   html {
     scrollbar-color: var(--csc-red) #000;
@@ -201,6 +207,13 @@ figure.inset-white {
   background: white;
 }
 
+@media (max-width: 768px) {
+figure.cover img {
+  object-position: -290px 0;
+}
+}
+
+
 .collage-03 {
   padding: 3vh;
   width: 100%;
@@ -292,6 +305,13 @@ figure.inset-white {
 
 
   }
+}
+
+
+@media (max-width: 768px) {
+figure.group-shot div img {
+  object-fit: contain;
+}
 }
 
 .collab-07 {
