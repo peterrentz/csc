@@ -57,20 +57,19 @@ ul li span {
 }
 
 h1 {
-  bottom: 0;
-  left: 0;
+
   background: var(--csc-yellow);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-family: var(--sans);
   line-height: 1;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
   position: absolute;
   margin: 0;
   color: var(--textcolor);
   opacity: 1;
-  z-index: 100;
-  padding: 1vh 1.5vh 0 0;
+  z-index: 110;
+  padding: .5rem 1.25rem 0;
 }
 
 @keyframes fadeIn {
@@ -117,11 +116,14 @@ img {
 } */
 
 .fixed-border {
-  z-index: 100;
+  z-index: 90;
   width: 100vw;
   height: 100vh;
   border: 1.5vh solid var(--csc-yellow);
   position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 
@@ -763,3 +765,7 @@ figure.inset-white {
   aspect-ratio: 4 / 5;
   height: 100%;
 }
+
+
+/* 
+Designed by Gerhard and Dan. Wired up by Peter.  */
