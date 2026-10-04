@@ -194,14 +194,20 @@ figcaption {
     text-transform: unset;
     text-align: center;
     font-size: 3vh;
-    width: calc(100% - 4rem);
-    max-width: 600px;
+    width: 34vw;
+    max-width: 43rem;
   }
 }
 
 @media (max-width: 768px) {
   figcaption h2 {
     font-size: 3.4vh;
+  }
+}
+
+@media (max-width: 768px) {
+  figcaption h2.introduction {
+    width: calc(100% - 4rem);
   }
 }
 
