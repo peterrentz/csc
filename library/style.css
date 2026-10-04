@@ -83,6 +83,12 @@ h1 {
   padding: .5rem 1.25rem 0;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    padding-bottom: 0.5rem;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -127,7 +133,7 @@ img {
 } */
 
 .fixed-border {
-  z-index: 90;
+  z-index: 110;
   width: 100vw;
   height: 100vh;
   border: 1.5vh solid var(--csc-yellow);
@@ -137,11 +143,23 @@ img {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .fixed-border {
+    border: none;
+  }
+}
+
 
 div.red-matte {
   padding: 3vh;
   height: 100vh;
   background-color: var(--csc-red);
+}
+
+@media (max-width: 768px) {
+  div.red-matte  {
+    padding: 0;
+  }
 }
 
 div.black-matte {
@@ -169,6 +187,14 @@ figcaption {
     text-transform: uppercase;
     line-height: 1.1;
     font-weight: 700;
+  }
+
+  h2.introduction {
+    text-transform: unset;
+    text-align: center;
+    font-size: 3vh;
+    width: calc(100% - 4rem);
+    max-width: 600px;
   }
 }
 
@@ -330,20 +356,21 @@ figure.inset-white {
     gap: 1vh;
     flex-direction: column;
     max-height: unset;
+    padding-top: 1vh;
 
     .pep {
-      width: 85vw;
+      width: 100vw;
       gap: 1vh;
     }
     .danny {
-      width: 85vw;
+      width: 100vw;
 
       .danny-top-row, .vero-bottom-row {
         flex-direction: column;
         gap: 1vh;
 
         figure.danny-lions-gate, figure.hope, figure.sword, figure.vero, figure.heart, figure.amy {
-          width: 85vw;
+          width: 100vw;
         }
       }
     }
@@ -536,7 +563,7 @@ figure.inset-white {
   }
 
   .exhibition-cover img {
-    object-position: -1000px 0;
+    object-position: -820px 0;
   }
 }
 
@@ -675,7 +702,6 @@ figure.inset-white {
     img {
       width: 100%;
       height: auto;
-      box-shadow: 10px 5px 5px var(--csc-red);
     }
   }
 }
@@ -692,7 +718,7 @@ figure.inset-white {
 
     .screenshots {
       order: 2;
-      height: 70vw;
+      /* height: 70vw; */
 
       img {
         object-position: center center;
@@ -709,6 +735,12 @@ figure.inset-white {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .publication-list  {
+      top: 24vh;
+  }
 }
 
 
